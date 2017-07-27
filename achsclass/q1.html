@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+
+
+function emailverify(email)
+	{
+	var filter=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+	str=email;
+	if(!filter.test(str))
+		{
+		return false
+		}
+	else return true;
+	}
+
+
+function validate()
+	{
+		name = document.getElementById('name').value;
+		email = document.getElementById('email').value;
+		phone = document.getElementById('phone').value;
+		address = document.getElementById('address').value;
+		comment = document.getElementById('comment').value;
+		
+		if(name=='')
+			{
+				alert('Enter your name');
+				document.getElementById('name').focus();
+				return false;
+			}
+		
+		
+		if(email=='')
+			{
+				alert('Enter your email');
+				document.getElementById('email').focus();
+				return false;
+			}
+			
+		if(!emailverify(email))
+			{
+				alert('Invalid Email');
+				document.getElementById('email').focus();
+				return false;
+			}
+			
+		if(phone=='')
+			{
+				alert('Enter your phone');
+				document.getElementById('phone').focus();
+				return false;
+			}
+			
+		if(address=='')
+			{
+				alert('Enter your address');
+				document.getElementById('address').focus();
+				return false;
+			}
+		
+		
+		
+		if(comment=='')
+			{
+				alert('Enter your comment');
+				document.getElementById('comment').focus();
+				return false;
+			}
+		
+	}
+</script>
+</head>
+
+<body>
+<h1>Feedback Form</h1>
+<form id="form1" name="form1" method="post" action="" onsubmit="Javascript: return validate();">
+  <table width="500" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="117" height="50">Name</td>
+      <td width="383"><input type="text" name="name" id="name" /></td>
+    </tr>
+    <tr>
+      <td height="50">Email</td>
+      <td><input type="text" name="email" id="email" /></td>
+    </tr>
+    <tr>
+      <td height="50">Phone</td>
+      <td><input type="text" name="phone" id="phone" /></td>
+    </tr>
+    <tr>
+      <td height="50">Address</td>
+      <td><input type="text" name="address" id="address" /></td>
+    </tr>
+    <tr>
+      <td height="50">Comment</td>
+      <td><textarea name="comment" rows="8" id="comment"></textarea></td>
+    </tr>
+    <tr>
+      <td height="50">&nbsp;</td>
+      <td><input type="submit" name="button" id="button" value="Submit" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

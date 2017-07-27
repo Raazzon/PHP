@@ -1,0 +1,19 @@
+div
+{
+	height:200px;
+	width:400px;
+	background-color:#900;
+	color:#FFF;
+	padding-left:20px;
+}
+b
+{
+	font-size:18px;
+	font-style:italic;
+	
+}
+
+body
+{
+	background-color:#0C0;
+}

@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+p
+{
+	color:#00F;
+	font-size:20px;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-style:italic;
+	font-weight:normal;
+	letter-spacing:10px;
+	word-spacing:20px;
+	line-height:100px;
+	text-transform:lowercase;
+	text-decoration:underline;
+	}
+	
+a
+{
+	color:#F00;
+	text-decoration:none;
+}
+
+div
+{
+	background-color:#000;
+	color:#FFF;
+	height:200px;
+	width:200px;
+	border-bottom:10px solid #F00;
+	border-top:10px #0C0 solid;
+
+}
+
+b
+{
+background-color:#000;
+color:#FFF;
+font-size:36px;
+height:200px;
+width:200px;
+}
+i
+{
+	background-color:#333;
+}
+
+
+
